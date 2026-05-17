@@ -60,7 +60,7 @@ void registrarProductos(char nombres[][MAX_NOMBRE], int cantidades[], float tiem
     ValidarTexto(nombres[*total], MAX_NOMBRE); // Llamada a la función para validar que el texto ingresado sea correcto
     printf("Ingrese la cantidad demandada: ");
     ValidarCantidad(&cantidades[*total]); // Llamada a la función para validar que la cantidad ingresada sea un número entero positivo
-    printf("Ingrese el tiempo de fabricacion por unidad: ");
+    printf("Ingrese el tiempo de fabricacion por unidad (en horas): ");
     ValidarFloat(&tiempos[*total]); // Llamada a la función para validar que el tiempo ingresado sea un número flotante positivo
     printf("Ingrese los recursos necesarios por unidad: ");
     ValidarCantidad(&recursos[*total]); // Llamada a la función para validar que los recursos ingresados sean un número entero positivo
@@ -76,7 +76,7 @@ void mostrarProductos(char nombres[][MAX_NOMBRE], int cantidades[], float tiempo
         return;
     }
     for(int i = 0; i < total; i++) { // BUCLE para mostrar todos los productos registrados
-        printf("\nPRODUCTO %d: \n Nombre: %s\n Cantidad demandada: %d\n Tiempo de fabricacion: %.2f\n Recursos necesarios: %d\n", i + 1, nombres[i], cantidades[i], tiempos[i], recursos[i]);
+        printf("\nPRODUCTO %d: \n Nombre: %s\n Cantidad demandada: %d\n Tiempo de fabricacion: %.2f horas\n Recursos necesarios: %d\n", i + 1, nombres[i], cantidades[i], tiempos[i], recursos[i]);
     }
 
 }
@@ -102,7 +102,6 @@ void editarProducto(char nombres[][MAX_NOMBRE], int cantidades[], float tiempos[
         printf("No existen productos registrados.\n");
         return;
     }
-    LimpiarBuffer(); // Llamada a la función para limpiar el buffer antes de leer el texto
     printf("Ingrese el nombre del producto a editar: ");
     ValidarTexto(buscado, MAX_NOMBRE); // Llamada a la función para validar que el texto ingresado sea correcto
     
@@ -131,7 +130,6 @@ void eliminarProducto(char nombres[][MAX_NOMBRE], int cantidades[], float tiempo
         printf("No existen productos registrados.\n");
         return;
     }
-    LimpiarBuffer(); // Llamada a la función para limpiar el buffer antes de leer el texto
     printf("Ingrese el nombre del producto a eliminar: ");
     ValidarTexto(buscado, MAX_NOMBRE); // Llamada a la función para validar que el texto ingresado sea correcto
     
