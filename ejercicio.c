@@ -1,6 +1,6 @@
 /*
 Nombres: Nicolas Menendez, Joel Cruz y Suri Arias
-Fecha: 04/05/2026
+Fecha: 05/05/2026
 Descripcion: Este programa permite gestionar la producción de una fábrica a través de un sistema de registro, edición, eliminación y visualización de productos, así como el cálculo del tiempo total requerido y los recursos necesarios para cumplir con la demanda, y la verificación de si la producción es viable con los recursos disponibles. 
 El programa utiliza funciones para validar entradas, manejar el buffer de entrada y realizar las operaciones necesarias para gestionar los productos y calcular los tiempos y recursos requeridos.
 */
