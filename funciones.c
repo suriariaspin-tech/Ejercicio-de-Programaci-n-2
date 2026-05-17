@@ -64,7 +64,6 @@ void registrarProductos(char nombres[][MAX_NOMBRE], int cantidades[], float tiem
     ValidarFloat(&tiempos[*total]); // Llamada a la función para validar que el tiempo ingresado sea un número flotante positivo
     printf("Ingrese los recursos necesarios por unidad: ");
     ValidarCantidad(&recursos[*total]); // Llamada a la función para validar que los recursos ingresados sean un número entero positivo
-    LimpiarBuffer(); // Llamada a la función para limpiar el buffer después de registrar un nuevo producto
     (*total)++; // Incrementa el contador de productos después de registrar un nuevo producto
     printf("Producto registrado correctamente.\n");
 }
