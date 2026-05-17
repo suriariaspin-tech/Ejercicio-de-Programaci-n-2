@@ -65,7 +65,7 @@ int main() {
             case 6: 
             {
                 float totalTiempo = calcularTiempoTotal(cantidades, tiempos, totalProductos); // Llamada a la función para calcular el tiempo total de producción
-                printf("Tiempo total requerido: %.2f\n", totalTiempo);
+                printf("Tiempo total requerido: %.2f horas\n", totalTiempo);
                 break;
             }
 
