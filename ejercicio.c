@@ -17,7 +17,7 @@ int main() {
     int opcion; //Variable para el menu
 
     do {
-        printf("\n===== GCP =====\n 1. Registrar producto\n 2. Mostrar productos\n 3. Buscar producto\n 4. Editar producto\n 5. Eliminar producto\n 6. Calcular tiempo total\n 7. Calcular recursos totales\n 8. Verificar produccion\n 9. Salir\n Seleccione una opcion: ");
+        printf("\n===== SISTEMA GCP =====\n 1. Registrar producto\n 2. Mostrar productos\n 3. Buscar producto\n 4. Editar producto\n 5. Eliminar producto\n 6. Calcular tiempo total\n 7. Calcular recursos totales\n 8. Verificar produccion\n 9. Salir\n Seleccione una opcion: ");
         ValidarCantidad(&opcion); // Llamada a la función para validar que la opción ingresada sea un número entero positivo
         while(opcion < 1 || opcion > 9) { // BUCLE para validar que la opción ingresada esté dentro del rango permitido
             printf("Opcion invalida. Seleccione una opcion del 1 al 9: ");
