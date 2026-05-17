@@ -182,7 +182,19 @@ void verificarProduccion(int cantidades[], float tiempos[], int recursos[], int 
 
     if(tiempoNecesario <= tiempoDisponible && recursosNecesarios <= recursosDisponibles) { // Se verifica si el tiempo necesario para cumplir con la demanda de todos los productos registrados es menor o igual al tiempo disponible ingresado por el usuario, y si los recursos necesarios para cumplir con la demanda de todos los productos registrados son menores o iguales a los recursos disponibles ingresados por el usuario, lo que indica que la producción es viable con los recursos disponibles
         printf("La fabrica SI puede cumplir la produccion.\n");
+        printf("El tiempo disponible y los recursos disponibles son suficientes.\n");
     } else {
         printf("La fabrica NO puede cumplir la produccion.\n");
+        
+        if(tiempoNecesario > tiempoDisponible) { // Se verifica si el tiempo necesario para cumplir con la demanda de todos los productos registrados es mayor al tiempo disponible
+        printf("El tiempo disponible no es suficiente.\n");
+        printf("Tiempo necesario: %.2f horas\n", tiempoNecesario);
+        printf("Tiempo disponible: %.2f horas\n", tiempoDisponible);
+        }
+        if(recursosNecesarios > recursosDisponibles) { // Se verifica si los recursos necesarios para cumplir con la demanda de todos los productos registrados son mayores a los recursos disponibles
+        printf("Los recursos disponibles no son suficientes.\n");
+        printf("Recursos necesarios: %d\n", recursosNecesarios);
+        printf("Recursos disponibles: %d\n", recursosDisponibles);
+        }
     }
 }
